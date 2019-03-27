@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # bootstrap sass
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
+# fetchs stocks
+gem 'stock_quote', '~> 2.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
