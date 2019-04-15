@@ -1,6 +1,18 @@
 class HomeController < ApplicationController
   def index
-    @stock = StockQuote::Stock.quote("symbol")
+    if params[:id] == ""
+      @nothing = "Hey, you forgot to enter a symbol"
+    elsif
+    
+      if params[:id]
+          @stock = StockQuote::Stock.quote(params[:id])
+          if !@stock
+             @error = "That Stock Symbol Doesn't Exist... please try again"
+          end
+        end
+      end
+    end
+
   end
   
   def about
@@ -8,4 +20,4 @@ class HomeController < ApplicationController
   
   def contact
   end
-end
+

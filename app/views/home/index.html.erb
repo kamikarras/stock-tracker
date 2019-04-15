@@ -2,7 +2,7 @@
 <%= form_tag root_path, :method => 'POST' do %>
 
         <%= text_field_tag 'id', nil, placeholder: 'Enter Company Ticker Symbol', size: 50 %>
-        <%= submit_tag 'Submit' %>
+        <%= submit_tag 'Lookup Stock Quote' %>
 
 <% end %>
 
@@ -10,6 +10,12 @@
 
 <br/>
 
-<% stock = StockQuote::Stock.quote("goog") %>
-
-<%= stock.inspect %>
+<% if @stock %>
+    <%= @stock.company_name %>
+    <%= @stock.latest_price %>
+<% elsif @nothing %>
+    <%= @nothing %>
+<% elsif @error %>
+    <%= @error %>
+<% end %>
+    
