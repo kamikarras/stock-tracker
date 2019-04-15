@@ -11,8 +11,11 @@
 <br/>
 
 <% if @stock %>
-    <%= @stock.company_name %>
-    <%= @stock.latest_price %>
+    <strong>Company Name: </strong><%= @stock.company_name %> - <%= @stock.symbol %> <br/>
+    <strong>Latest Ask: </strong><%= @stock.latest_price %> <br/>
+    <strong>Previous Close: </strong><%= @stock.previous_close %> <br/>
+    <strong>Change: </strong><%= @stock.change %> <br/>
+    <strong>Sector: </strong><%= @stock.sector %> <br/>
 <% elsif @nothing %>
     <%= @nothing %>
 <% elsif @error %>
