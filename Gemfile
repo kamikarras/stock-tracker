@@ -29,6 +29,8 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # fetchs stocks
 gem 'stock_quote', '~> 2.0'
 
+gem 'devise', '~> 4.6', '>= 4.6.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
